@@ -6,7 +6,6 @@ build/
 
 *.log
 
-# Miljövariabler
 .env
 
 *.png
