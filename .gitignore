@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+
+dist/
+build/
+
+*.log
+
+# Miljövariabler
+.env
+
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.pdf
