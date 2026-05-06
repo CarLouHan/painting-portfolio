@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1 class="headerTitle"><a href="index.html">CAROLIN HANSSON ROOS</a></h1>
+
+        <nav class="navbar">
+            <a href="index.html"></a>
+             <!--<a href="cv.html">cv</a>-->
+            <a href="contact.html">contact</a>
+        </nav>
+</header>
+
+    <div class="contactPage">
+        <h1>Contact me</h1>
+        <form action="mailto:hansson.carolin@gmail.com" method="post" enctype="text/plain">
+            <label for="namn">Name:</label>
+            <input type="text" id="namn" name="namn" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="meddelande">Message:</label>
+            <textarea id="meddelande" name="meddelande" rows="5" required></textarea>
+        
+            <button type="submit">Send</button>
+          </form>
+          <div id="confirmationMessage" style="display:none; color: green; margin-top: 20px;">
+            Your message has been sent successfully!
+        </div>
+    </div>
+ 
+
+    
+    <script>
+        function showConfirmation(event) {
+          event.preventDefault();  // Förhindrar att formuläret skickas på vanligt sätt och sidan laddas om.
+      
+          // Visa bekräftelsemeddelandet
+          document.getElementById("confirmationMessage").style.display = "block";
+      
+          // Skicka formuläret efter att bekräftelsen visats
+          setTimeout(function() {
+            document.getElementById("contactForm").submit(); // Skickar formuläret via mailto.
+          }, 2000);  // Vänta 2 sekunder innan formuläret skickas.
+        }
+      </script>
+    
+</body>
+</html>
